@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>轻松一下</title>
-		<link href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
-		<script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
-		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-	</head>
-	<body>
-		<!-- 准备一个容器用来存放音乐播放器 -->
-		<!--
-		<div class="aplayer"
-			data-id="8276497203"
-			data-server="tencent"
-			data-type="playlist"
-			data-fixed="false">
-        </div>
-		-->
-		<div class="aplayer"
-			data-id="8537501"
-			data-server="netease"
-			data-type="playlist"
-			data-fixed="false">
-        </div>
-	</body>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />    <link href="./styles.css" rel="stylesheet">
+    <title>轻松一下</title>
+    <!-- require APlayer -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- 准备一个容器用来存放音乐播放器 -->
+    <!-- server: 音乐平台：netease，tencent，kugou，xiami，baidu-->
+    <!-- type: song, playlist, album, search, artist-->
+	<!--
+    <h1>莫文蔚</h1>
+    <div class="aplayer"
+         data-id="8276497203"
+         data-server="tencent"
+         data-type="playlist"
+         data-fixed="false">
+    </div>
+	-->
+    <h1>我·喜欢</h1>
+    <div class="aplayer"
+         data-id="7619171629"
+         data-server="netease"
+         data-type="playlist"
+         data-fixed="false">
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
 </html>
